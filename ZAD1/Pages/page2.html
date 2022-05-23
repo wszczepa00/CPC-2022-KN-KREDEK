@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../Styles/style2.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Skrypt odpowiedzialny za ukrycie przycisku o id hideBtn -->
+        <script>
+            $(document).ready(function(){
+            $("#hideBtn").click(function(){
+            $("#hideBtn").hide();
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <!-- Link do strony głownej -->
+        <a href="../index.html">
+            <!-- Przycisk zapewniający powrót do strony głównej  -->
+            <button class="back-btn" id="back-btn">
+                Go back!
+            </button>
+        </a>
+        <!-- Kontener przechowujacy widok strony -->
+        <div class="view-container">
+            <!-- Informacja o tym co nalezy robic -->
+            <div id="mainText"> Click Start button as many time as you can in 3 seconds!</div>
+            <!-- Ilosc wykonanych juz kliknięc -->
+            <div class="counter" id="counter"></div>
+            <!-- Przycisk, zwiększający wartość liczby wciśnięć -->
+            <button class="btn-middle" id="startBtn">
+                Start
+            </button>
+            <button class="btn-middle" id="hideBtn">
+               Hide this Button
+            </button>
+            
+        </div>
+        <script src="../Scripts/script2.js"></script>
+    </body>
+</html>

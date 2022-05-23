@@ -1,0 +1,51 @@
+/* Nagłowek h1 */
+h1{
+    padding: 10px;
+    color: rgb(143, 17, 234);
+    font-size: 50px;
+}
+/* Nagłówek h2 */
+h2{
+    color: yellow;
+    font-size:30px;
+}
+/* html i body */
+html, body {
+    margin:0px;
+    height: 100%;
+  }
+/* Kontener do górnej czesci strony */
+.container{
+
+    display: flex;
+    background-color: green;
+    align-items: center;
+    justify-content: center;
+    height:50%;
+}   
+/* Przyciski przekierowujace na kolejne strony */
+.container-btn{
+
+    border-radius: 10px;
+    background: red;
+    height: 150px;
+    width: 150px;
+    font-size: 40px;
+}
+/* Przyciski po najechaniu myszka */
+.container-btn:hover{
+
+    background-color: rgb(226, 15, 153);
+}
+/* Kontener do dolnej czesci strony */
+.container2{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height:50%;
+    background-color:blue;
+    
+    
+}
+

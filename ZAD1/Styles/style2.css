@@ -1,0 +1,111 @@
+/* Czcionki z google fonts */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+/* Zmiana koloru strony */
+body{
+    background-color: rgb(171, 206, 221);
+    
+} 
+/* Tekst zwiazany z informacjami o wylosowanym kolorze*/
+#text {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+}
+
+/* Kontener na wylosowany kolor */
+.color-container {
+
+    margin-bottom:10px;
+
+}
+/* Box na informacje o losowaniu */
+.box {
+    width: 300px;
+    border: 2px solid green;
+    padding: 50px;
+    padding-top:0px;
+    margin: 20px;
+    margin-top:0px;
+    border-radius: 10px;
+  }
+
+/* Przycisk przekierowujacy na strone glowna */
+.back-btn {
+
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    margin-right: 0;
+    margin-left:auto;
+    background-color: black;
+    color: white;
+    
+    
+}
+/* Przycisk przekierowujacy na strone głowna po najechaniu */
+.back-btn:hover{
+    background-color:grey;
+} 
+/* Kontener na przyciski obslugujace losowanie */
+.btns-container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Kontener glowny przy wciskaniu przycisku w ciagu 3 sekund */
+.view-container{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+/* Box na wylosowany kolor */
+.color-box{
+    display:flex;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 0.5px solid black;
+    margin-left: 5px;
+    margin-bottom: -6px;   
+}
+/* Przycisk umiejscowiony na srodku strony w poziomie */
+.btn-middle {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: 0.5px solid rgb(14, 1, 1);
+
+}
+/* Przycisk po najechaniu */
+.btn-middle:hover {
+    background-color: rgb(224, 218, 218)
+}
+/* Przycisk do losowanie oraz dodatkowe atrybuty dla przycisku btn-middle */
+.btn-random , .btn-middle{
+
+    font-family: 'Muli', sans-serif;
+    height: 50px;
+    margin: 10px;
+    width: 150px;
+    
+}
+/* Licznik klikniec */
+.counter{
+
+    font-size: 250px;
+}
+/* Tekst glowny na stronie */
+#mainText{
+
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+}

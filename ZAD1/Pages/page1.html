@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../Styles/style2.css">
+        <title>Document</title>
+    </head>
+    <body id="body">
+        <!-- Link do strony głownej -->
+        <a href="../index.html">
+            <!-- Przycisk zapewniający powrót do strony głównej  -->
+            <button class="back-btn" id="back-btn">
+                Go back!
+            </button>
+        </a>
+        <!-- Kontener z informacjami o wylosowany kolorze i o czasie trwania losowania -->
+        <div class="view-container">
+            <div class="box" id="box">
+                <div id="text">Informations:</div>
+                <!-- Kontener przechowujący box na wylosowany kolor  -->
+                <div class="color-container">
+                    Color:
+                    <span id="color"></span>
+                    <!-- Box na wylosowany kolor -->
+                    <span class="color-box" id="colorBox"></span>
+                </div>
+                <!-- Informacja o tym ile sekund trwalo losowanie -->
+                <div>
+                    Seconds:
+                    <span id="seconds"></span>
+                </div>
+            </div>
+            <!-- Kontener na przyciski obsługujące losowanie -->
+            <div class="btns-container">
+                <!-- Przycisk rozpoczynajacy losowanie -->
+                <button class="btn-random" id="draw-btn">Draw color</button>
+                <!-- Przycisk przerywajacy losowanie -->
+                <button class="btn-random" id="stop-btn"> Stop</button>
+            </div>
+        </div>
+        <script src="../Scripts/script1.js"></script>
+    </body>
+</html>

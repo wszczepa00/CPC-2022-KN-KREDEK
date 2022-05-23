@@ -1,0 +1,48 @@
+﻿@model ZadanieDomowe2.Models.Track
+
+@{
+    ViewData["Title"] = "Godziny dla toru";
+}
+
+
+
+<div class="text-center">
+    <h1 class="display-4"> Wybrany tor: @Model.Number</h1>
+
+    @foreach (KeyValuePair<string, List<bool>>
+item in Model.TrackHours)
+    {
+        <div>@item.Key</div>
+        int start = 0;
+        @foreach (var value in Model.TrackHours[item.Key])
+        {
+            if (item.Key == "Sobota" && start == 0)
+            {
+                start = 12;
+            }
+            else if (item.Key == "Niedziela" && start == 0)
+            {
+                start = 13;
+            }
+            else if (start == 0)
+            {
+                start = 15;
+            }
+            if (@value)
+            {
+                <div>
+                    <span style="color:green">@(start++):00 - @start:00</span>
+                    <span id="@start" style="margin-left:20px">@Html.ActionLink("Rezerwuj", "Reservation", new { Number = @Model.Number })</span>
+                </div>
+            }
+            else
+            {
+                <div>
+                    <span style="color:red">@(start++):00 - @start:00</span>
+                    <span style="margin-left:20px">Zajęte</span>
+                </div>
+            }
+        }
+    }
+</div>
+<a asp-action="AllTracks">Powrót</a>

@@ -1,0 +1,36 @@
+﻿@model Grade
+@using (Html.BeginForm("Delete", "Grades", FormMethod.Post))
+{
+    <h3>Czy na pewno chcesz usunąc poniższy rekord?</h3>
+    <br />
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Student)
+        </dt>
+        <dt class="col-sm-10">
+            @{
+                var StudentName = Model.Student.Name + " " + Model.Student.LastName;
+                @Html.DisplayFor(name => StudentName);
+            }
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Course)
+        </dt>
+        <dt class="col-sm-10">
+            @{
+                var CourseName = Model.Course.Name;
+                @Html.DisplayFor(name => CourseName);
+            }
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mark)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(model => model.Mark)
+        </dt>
+
+
+    </dl>
+    <input type="submit" , value="Usun" class="btn btn-danger" />
+}

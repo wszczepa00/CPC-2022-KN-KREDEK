@@ -1,0 +1,34 @@
+﻿@model Student
+
+@using (Html.BeginForm("Create", "Students", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        <div class="col-md">
+            @Html.TextBoxFor(model => model.Name)
+
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.LastName)
+        <div class="col-md">
+            @Html.TextBoxFor(model => model.LastName)
+
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.FieldId)
+        <div class="col-md">
+            @Html.TextBoxFor(model => model.FieldId)
+
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Index)
+        <div class="col-md">
+            @Html.TextBoxFor(model => model.Index)
+
+        </div>
+    </div>
+    <input type="submit" value="Dodaj Studenta " class="btn btn-primary " />
+}

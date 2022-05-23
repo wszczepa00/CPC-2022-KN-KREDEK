@@ -1,0 +1,49 @@
+﻿@model ZadanieDomowe2.Models.Reservation
+
+@{
+    ViewData["Title"] = "Twoja Rezerwacja";
+}
+
+<h1>Twoje rezerwacja</h1>
+<hr />
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayName("Numer toru")
+        </dt>
+        <dd class="col-sm-10">
+            @ViewBag.reservedTrack.Number
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Cena za godzine")
+        </dt>
+        <dd class="col-sm-10">
+            @ViewBag.reservedTrack.PricePerHour zł
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Imie")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Nazwisko")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Numer telefonu")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Data zamówienia")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReservationDate)
+        </dd>
+    </dl>
+</div>
+<a asp-action="Index">Powrót</a>

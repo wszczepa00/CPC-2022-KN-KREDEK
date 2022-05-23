@@ -1,0 +1,43 @@
+﻿@model ZadanieDomowe2.Models.Reservation
+
+@{
+    ViewData["Title"] = "Rezerwacja";
+}
+
+<h1>Złóż rezerwacje</h1>
+
+<h4> Numer toru: @ViewBag.track.Number</h4>
+<h6>Cena za godzinę: @ViewBag.track.PricePerHour</h6>
+<h6>Ilosc możliwych graczy: @ViewBag.track.Players</h6>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Reservation">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="TrackNumber" type="hidden" value=@ViewBag.track.Number />
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Imię</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label">Nazwisko</label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label">Numer telefonu</label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Zarezerwuj!" class="btn btn-dark" />
+            </div>
+        </form>
+    </div>
+</div>

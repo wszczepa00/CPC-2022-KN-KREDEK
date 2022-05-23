@@ -1,0 +1,29 @@
+﻿@model Grade
+
+@using (Html.BeginForm("Edit", "Grades", FormMethod.Post))
+{
+    <h3>Edytuj Ocene</h3>
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(model => model.StudentId)
+        <div class="col-md">
+            @Html.TextBoxFor(model => model.StudentId)
+
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.CourseId)
+        <div class="col-md">
+            @Html.TextBoxFor(model => model.CourseId)
+
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Mark)
+        <div class="col-md">
+            @Html.TextBoxFor(model => model.Mark)
+
+        </div>
+    </div>
+    <input type="submit" value="Edytuj Ocene " class="btn btn-primary " />
+}

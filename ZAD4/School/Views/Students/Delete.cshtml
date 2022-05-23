@@ -1,0 +1,55 @@
+﻿@model Student
+@using (Html.BeginForm("Delete", "Students", FormMethod.Post))
+{
+    <h3>Czy na pewno chcesz usunąc poniższy rekord?</h3>
+    <br />
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dt>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dt>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Field)
+        </dt>
+        <dt class="col-sm-10">
+            @{
+                var FieldName = Model.Field.Name;
+                @Html.DisplayFor(name => FieldName);
+            }
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Index)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(model => model.Index)
+        </dt>
+
+        <dt class="col-sm-12">
+            Zostana również usuniete poniższe oceny:
+        </dt>
+        @foreach (var grade in Model.Grades)
+        {
+
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => grade.Mark)
+            </dt>
+            <dt class="col-sm-10">
+                @Html.DisplayFor(model => grade.Mark)
+            </dt>
+
+        }
+
+    </dl>
+    <input type="submit" , value="Usun" class="btn btn-danger" />
+}

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Course>
+@{
+    ViewData["Titled"] = "Lista Kursów";
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ects)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => course.Id);
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => course.Name);
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => course.Ects);
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

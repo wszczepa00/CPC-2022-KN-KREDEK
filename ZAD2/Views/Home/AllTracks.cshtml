@@ -1,0 +1,53 @@
+﻿@model IEnumerable<ZadanieDomowe2.Models.Track>
+
+@{
+    ViewData["Title"] = "Tory do gry";
+}
+
+
+<h1 style="margin-bottom: 60px">Wybierz Tor: </h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Numer Toru:
+            </th>
+            <th>
+                Maksymalna ilość graczy:
+            </th>
+            <th>
+                Cena za godzine:
+            </th>
+            <th>
+                Opis:
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td align="center">
+                    @Html.DisplayFor(modelItem => item.Number)
+                </td>
+                <td align="center">
+                    @Html.DisplayFor(modelItem => item.Players)
+                </td>
+                <td align="center">
+                    @Html.DisplayFor(modelItem => item.PricePerHour) zł
+                </td>
+                <td align="center">
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.ActionLink("Wybier tor", "TrackHours", new { Number = item.Number })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="Index">Powrót</a>
+

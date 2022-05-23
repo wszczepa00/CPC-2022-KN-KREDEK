@@ -1,0 +1,13 @@
+﻿@model School.Models.Grade
+
+@{
+    ViewData["Title"] = "Szczegóły";
+}
+
+<h1>Szczegóły Oceny</h1>
+
+<h4>Student: @ViewBag.student.Name  @ViewBag.student.LastName</h4>
+<h4>Przedmiot: @ViewBag.Course.Name</h4>
+<h4>Ocena: @Model.Mark</h4>
+<h4> ECTS: @ViewBag.Course.Ects</h4>
+<a asp-action="AllGrades">Powrót</a>

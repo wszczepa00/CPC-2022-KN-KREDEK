@@ -1,0 +1,58 @@
+﻿@model IEnumerable<School.Models.Grade>
+
+@{
+    ViewData["Title"] = "Grades";
+}
+
+<div align="center">
+    <input type="button" class="btn btn-primary" value="Dodaj Ocene" onclick="location.href='@Url.Action("AddGrade", "Home")'" />
+</div>
+
+<h1>Oceny: </h1>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                GradeId
+            </th>
+            <th>
+                Student
+            </th>
+            <th>
+                Kurs
+            </th>
+            <th>
+                Ocena
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GradeId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CourseId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mark)
+                </td>
+                <td>
+                    @Html.ActionLink("Szczegóły", "GradeDetails", new { id = item.GradeId }) | @Html.ActionLink("Usun", "DeleteGrade", new { id = item.GradeId }) | @Html.ActionLink("Zmien", "UpdateGrade", new { id = item.GradeId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

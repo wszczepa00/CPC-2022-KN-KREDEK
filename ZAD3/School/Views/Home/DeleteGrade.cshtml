@@ -1,0 +1,10 @@
+﻿@model School.Models.Grade
+
+@{
+    ViewData["Title"] = "Usuwanie";
+}
+
+<div align="center" style="margin-top:350px">
+    <h2> Pomyslnie usunięto ocene @ViewBag.student.Name @ViewBag.student.LastName z kursu @ViewBag.course.Name!</h2>
+</div>
+<a asp-action="AllGrades">Powrót</a>
